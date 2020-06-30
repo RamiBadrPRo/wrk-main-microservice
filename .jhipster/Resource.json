@@ -1,0 +1,43 @@
+{
+  "name": "Resource",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "inspecCode",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "resourceRule",
+      "otherEntityRelationshipName": "resource",
+      "relationshipName": "resourceRule"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "resourceInput",
+      "otherEntityRelationshipName": "resource",
+      "relationshipName": "resourceInput"
+    }
+  ],
+  "changelogDate": "20200629184806",
+  "entityTableName": "resource",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "backend",
+  "applications": "*",
+  "microserviceName": "backend"
+}

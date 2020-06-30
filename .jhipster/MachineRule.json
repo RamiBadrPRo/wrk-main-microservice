@@ -1,0 +1,54 @@
+{
+  "name": "MachineRule",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resourceInput",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ruleInput",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "machine",
+      "otherEntityRelationshipName": "machineRule",
+      "relationshipName": "machine",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "resourceRule",
+      "otherEntityRelationshipName": "machineRule",
+      "relationshipName": "resourceRule",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "machine",
+      "otherEntityRelationshipName": "machineRule",
+      "relationshipName": "machine",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200629185206",
+  "entityTableName": "machine_rule",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "backend",
+  "applications": "*",
+  "microserviceName": "backend"
+}

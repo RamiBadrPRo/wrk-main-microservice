@@ -1,0 +1,45 @@
+{
+  "name": "ResourceRule",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "input",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "refName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "machineRule",
+      "otherEntityRelationshipName": "resourceRule",
+      "relationshipName": "machineRule",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "resource",
+      "otherEntityRelationshipName": "resourceRule",
+      "relationshipName": "resource",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200629184906",
+  "entityTableName": "resource_rule",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "backend",
+  "applications": "*",
+  "microserviceName": "backend"
+}

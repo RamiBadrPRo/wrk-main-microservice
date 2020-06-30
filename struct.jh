@@ -1,0 +1,43 @@
+entity Resource {
+	Name String,
+    Description String,
+    InspecCode String
+}
+
+
+entity ResourceRule {
+	Description String,
+    Input Boolean,
+    RefName String
+}
+
+entity ResourceInput {
+	Title String,
+    RefName String
+}
+
+entity Machine {
+	Name String,
+    IpAddr String,
+    OS String,
+    AccessUsername String,
+    AccessPassword String
+}
+
+entity MachineRule {
+	Status String,
+    ResourceInput String,
+    RuleInput String
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+    Machine to MachineRule,
+    Resource to ResourceRule,
+    Resource to ResourceInput
+}
+
+relationship OneToOne {
+	MachineRule to Machine,
+    MachineRule to ResourceRule
+}

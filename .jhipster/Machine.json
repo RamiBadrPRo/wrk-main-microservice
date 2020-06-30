@@ -1,0 +1,52 @@
+{
+  "name": "Machine",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipAddr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "oS",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accessUsername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accessPassword",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "machineRule",
+      "otherEntityRelationshipName": "machine",
+      "relationshipName": "machineRule"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "machineRule",
+      "otherEntityRelationshipName": "machine",
+      "relationshipName": "machineRule",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200629185106",
+  "entityTableName": "machine",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "backend",
+  "applications": "*",
+  "microserviceName": "backend"
+}
